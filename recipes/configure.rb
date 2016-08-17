@@ -12,7 +12,7 @@ ruby_block "download-object" do
 
     s3 = AWS::S3.new
 
-    myfile = s3.buckets['linuxinfrastructure-files'].objects['ansible-files/packages/ansible-2.1.0.0-1.amzn1.noarch.rpm']
+    myfile = s3.buckets['linuxinfrastructure-files'].objects['ansible-files/packages/ansible-2.1.1.0-1.el6.noarch.rpm']
     Dir.chdir("/tmp")
     File.open("ansible.rpm", "w") do |f|
       f.syswrite(myfile.read)
